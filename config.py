@@ -20,7 +20,7 @@ Timezone = 7
 Notify_queue = True
 # bool, True: Send the menfess queue to sender
 # The first tweet in queue won't be notified to sender (the delay is very quick).
-Notify_queueMessage = "ⓘ  Menfess kamu berada pada urutan ke-{}, akan terkirim sekitar pukul {}.\n\nKirimkan pesan '/cancel' untuk " \
+Notify_queueMessage = "ⓘ  Menfess kamu berada pada urutan ke-{}, akan terkirim sekitar pukul {}.\n\nKirimkan pesan /cancel untuk " \
                       "membatalkan menfess kamu sebelum terkirim."
 # Please keep the "{}" format -> .format(queue, time)
 
@@ -29,44 +29,44 @@ Notify_sent = True
 Notify_sentMessage = "ⓘ  Menfess kamu telah berhasil terkirim! \n\nhttps://twitter.com/{}/status/"
 # Please keep the "{}" format -> .format(bot_username) + postid
 
-Notify_sentFail1 = "⚠️ Maaf menfess kamu gagal terkirim, mungkin ada kesalahan pada sistem \nSilahkan coba kembali atau laporkan kepada admin"
+Notify_sentFail1 = "⚠️  Maaf menfess kamu gagal terkirim, mungkin ada kesalahan pada sistem.\nSilahkan coba kembali atau laporkan kepada admin @arhspace"
 # Used when error is happened in system
 
 Interval_perSender = True # bool
 Interval_time = 5 # int
 # Interval time (in minute) of sending menfess per sender, Admin pass this filter
-Notify_intervalPerSender = "❗Oopss! take a rest ☕ \nUntuk menghindari spam silakan kirim menfess lagi setelah pukul {}"
+Notify_intervalPerSender = "❗Oopss! take a rest ☕ \nUntuk menghindari spam silahkan kirim menfess kembali setelah pukul {}"
 # Please keep the "{}".format(time)
 
-Delay_time = 34 # int, seconds
+Delay_time = 24 # int, seconds
 # Twitter API limits user to post tweet. System will delay 36s per/tweet. You can add it by input
 # seconds in Delay_time. e.g Delay_time = 24, it means system will delay 60 seconds per tweet
 # I advice you to fill Delay_time to avoid being banned from twitter
 
 # Welcome message to new followers
 Greet_newFollower = True
-Notif_newFollower = "ⓘ  Hai! Terima kasih udah follow base ini 🖤 \nUntuk mendapatkan follback dari base ini silahkan tunggu max 1x24 jam\n\n📌 Jika ada pertanyaan tentang bot atau ingin paid promote silahkan hubungi admin @arhspace \n\nTerima kasih! 🙏"
+Notif_newFollower = "ⓘ  Hi there! Terima kasih udah follow base ini 🖤.\nUntuk mendapatkan follback dari base ini silahkan tunggu max 1x24 Jam\n\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)"
 
 Keyword_deleter = True # Trigger word deleter
 # bool, True: Delete keyword from menfess before uploaded
 
 # send notif to user that followed by bot
 Greet_followed = True
-Notif_followed = "ⓘ  Hai! Kamu udah di follback oleh base ini. Jangan lupa ikutin peraturan base ini sebelum mengirim menfess yaa!\n\nKirimkan pesan '/menu' untuk melihat fitur bot."
+Notif_followed = "ⓘ  Hi there! Kamu udah di follback oleh base ini.\nJangan lupa ikutin semua RULES ya!\n\nKirimkan pesan /menu untuk menampilkan menu.\n\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)"
 
 Minimum_lenMenfess = 5 # length of the menfess
-Maximum_lenMenfess = 1120
-Notify_lenMenfess = f"⚠️ Untuk mengirimkan menfess minimum jumlah karakter : {Minimum_lenMenfess} dan maksimum jumlah karakter : {Maximum_lenMenfess}"
+Maximum_lenMenfess = 2000
+Notify_lenMenfess = f"⚠️  Maaf, untuk mengirimkan menfess minimum jumlah karakter : {Minimum_lenMenfess} dan maksimum jumlah karakter : {Maximum_lenMenfess}"
 
 Only_QRTBaseTweet = False
-Notif_QRTBaseTweet = "❗ Kamu hanya bisa mengirim url tweet dari base ini :("
+Notif_QRTBaseTweet = "❗ Kamu hanya bisa mengirim url tweet dari base ini"
 
 Only_twitterUrl = False
-Notif_twitterUrl = "❗ Kamu hanya bisa mengirim url yang berasal dari twitter :("
+Notif_twitterUrl = "❗ Kamu hanya bisa mengirim url yang berasal dari twitter"
 
 Verify_beforeSent = True
 Verify_beforeSentData = {
-    'text'      : 'ⓘ  Sebelum menfess nya dikirim pastiin kamu udah baca dan pahami semua peraturan base ini ya!\n\nKamu yakin mau mengirim menfess ini? 🤔',
+    'text'      : 'ⓘ  Sebelum menfess nya dikirim pastiin kamu udah ikutin RULES base ini ya!\n\nKamu yakin mau mengirim menfess ini?',
     'options'   : [
         {
             'label'         : '👍 Kirim',
@@ -85,12 +85,12 @@ Verify_beforeSentData = {
 Sender_requirements = True
 # bool, True: sender should passes the following requirements: (admin pass this filter)
 Only_followed = True
-Notif_notFollowed = "ⓘ  Maaf kamu belum bisa mengirim menfess sebelum follow base ini atau kamu belum di follback oleh base ini 😔"
+Notif_notFollowed = "ⓘ  Hi there! Maaf kamu belum bisa mengirim menfess sebelum follow dan di follback oleh base ini 😔"
 # Minimum_followers and Minimum_day is (automatically) required when Sender_requirements is True.
 Minimum_followers = 2 # int
 # Minimum-account-created-at
 Minimum_day = 100 # 100, it means sender account must be created at 100 days ago
-Notify_senderRequirements = f"ⓘ  Maaf yaa kamu belum memenuhi syarat base ini, kamu harus punya {Minimum_followers} followers dan umur akun kamu harus \
+Notify_senderRequirements = f"ⓘ  Hi there! Maaf kamu belum memenuhi syarat base ini, kamu harus punya {Minimum_followers} followers dan umur akun kamu harus \
 lebih dari {Minimum_day} hari biar bisa ngirim menfess.\nCoba lagi yaa di lain waktu ☹️🙏"
 
 Private_mediaTweet = False
@@ -117,7 +117,7 @@ Account_status = True
 # bool, True: Turn on the automenfess. If it turned into False, this bot won't
 # post menfess. You can switch it using '/switch on/off' command from DM
 Notify_accountStatus = "❗Automenfess sedang dimatikan oleh admin, silakan cek tweet terbaru atau \
-hubungi admin untuk informasi lebih lanjut"
+hubungi admin @arhspace untuk informasi lebih lanjut"
 
 Off_schedule = False
 # schedule automenfess to turned off
@@ -129,20 +129,20 @@ Off_scheduleData = {
 Off_scheduleMsg = f"Automenfess dimatikan setiap pukul {Off_scheduleData['start'][0]}:{Off_scheduleData['start'][1]} \
 sampai dengan pukul {Off_scheduleData['end'][0]}:{Off_scheduleData['end'][1]}"
 
-Trigger_word = ["fess!", "🖤"]
+Trigger_word = ["🖤"]
 Notify_wrongTrigger = {
     'user'      : True, # send notif to user
     'admin'     : False, # send wrong trigger menfess to admin
-    'message'   : "ⓘ  Hello! Selamat datang di base kami :) \n\nUntuk bisa kirim menfess silahkan gunakan trigger word 🖤\nKamu bisa juga kirimkan pesan /menu untuk melihat fitur bot\n\n📌 Jangan lupa follow base kami yaa dan jangan lupa baca RULES!\n\nJika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! 🙏🏼\n\nhttps://p.arh.my.id/",
+    'message'   : "ⓘ  Hi there! Selamat datang di base kami :) \n\nUntuk bisa kirim menfess silahkan gunakan trigger  “ 🖤 ”\nKamu bisa juga kirimkan pesan /menu untuk menampilkan menu.\n\n📌 Jangan lupa follow base kami yaa dan jangan lupa ikutin RULES!\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)\n\nhttps://p.arh.my.id/",
 }
 
 Sensitive_word = "/sensitive"
 # Used when sender send sensitive content, order them to use this word
 # But I advise against sending sensitive content, Twitter may ban your account,
 # And using this bot for 'adult' base is strictly prohibited.
-Blacklist_words = ['covid', 'blablabla', 'nigga'] 
+Blacklist_words = ['covid', 'blablabla', 'nigga' , 'anjing', 'babi', 'lonte', 'tolol', 'bodoh', 'bego', 'kontol', 'memek', 'asu'] 
 # hashtags and mentions will be changed to "#." and "@."
-Notify_blacklistWords = "‼️ Maaf di menfess kamu terdapat blacklist words, jangan lupa baca peraturan base yaa!"
+Notify_blacklistWords = "ⓘ  Maaf di menfess kamu terindikasi blacklist words, jangan lupa baca RULES base!"
 Notify_blacklistWordsAdmin = True # Will be sent to admin
 
 # Please set Admin_cmd and User_cmd in lowercase
@@ -169,13 +169,14 @@ User_cmd = {
     '/delete'           : 'self._delete_menfess(sender_id, urls)', # /delete tweet_url
     '/unsend'           : 'self._unsend_menfess(sender_id)', # /unsend
     '/menu'             : 'self._menu_dm(sender_id)', # /menu
+    '/donate'           : 'self._menu_donate(sender_id)', # /donate    
     '/cancel'           : 'self._cancel_menfess(sender_id)', # /cancel
     '/display_blacklist': 'self._display_blacklist(sender_id)', # /display_blacklist
 }
 # /delete and /unsend is not available for user when bot was just started and user id not in db_sent
 # /delete & db_sent are only available for one day (reset every midnight or heroku dyno cycling)
 Notif_DMCmdDelete = {
-    'succeed'   : 'ⓘ  Menfess kamu sudah berhasil dihapus!',
+    'succeed'   : 'ⓘ  Menfess kamu udah berhasil dihapus!',
     'failed'    : 'ⓘ  Menfess ini udah ga bisa kamu hapus :('
 }
 # Notif_DMCmdDelete is only for user, '/unsend' using this notif too
@@ -188,8 +189,8 @@ Notif_DMCmdCancel = {
 # Max 20 options, Max 72 chars description, Please keep the metadata, Read metadata doc at README.md
 # When user click the button, It is automatically sent to webhook (dont use if command has an argument e.g. /delete (url))
 DMCmdMenu = {
-    'text'      : 'ⓘ Hello 👋\nUntuk mengirimkan menfess kamu bisa gunakan trigger word 🖤\nKamu juga bisa mengirim beberapa command secara langsung melalui botton atau menulis manual:\n\n'
-                  'Contoh : /delete (url menfess) : Untuk menghapus menfess dengan menyertakan url\n/unsend : Untuk menghapus menfess terakhir yang telah terkirim\n\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)',
+    'text'      : 'ⓘ  Hi there! 👋\n\nUntuk mengirimkan menfess kamu bisa gunakan trigger word  “ 🖤 ”\nKamu juga bisa mengirim beberapa command secara langsung melalui quick button atau menulis secara manual.\n\n'
+                  'List menu : \n/delete (url menfess) : Untuk menghapus menfess dengan menyertakan url\n/unsend : Untuk menghapus menfess terakhir yang telah terkirim\n/cancel : Untuk membatalkan menfess terakhir saat masih dalam antrian sebelum terkirim\n/sensitive : Gunakan command ini dalam menfess kamu apabila terdapat konten sensitive\n\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)',
     'options'   : [
         {
             'label'         : 'Unsend',
@@ -205,6 +206,21 @@ DMCmdMenu = {
             'label'         : 'Blacklist Words',
             'description'   : 'Menampilkan blacklist words',
             'metadata'      : 'exec|self._button_command(sender_id, "/display_blacklist")'
+        },
+	  {
+            'label'         : 'Donate 💝',
+            'description'   : 'Menampilkan Info Donasi',
+            'metadata'      : 'exec|self._button_command(sender_id, "/donate")'
+        },    ]
+}
+
+DMCmdDonate = {
+    'text'      : 'ⓘ  Hi good people!\n\nSiapapun kamu yang udah donasi, terima kasih banyak!\nDonasi ini akan di gunakan untuk menjalankan base ini. Berapapun donasi kamu akan diterima dengan senang hati! 🖤 \nhttps://saweria.co/\n\n📌 Jika ada pertanyaan silahkan hubungi admin @arhspace\n\nTerima kasih! :)',
+    'options'   : [
+        {
+            'label'         : 'Menu',
+            'description'   : 'Menampilkan list menu',
+            'metadata'      : 'exec|self._button_command(sender_id, "/menu")'
         },
     ]
 }
